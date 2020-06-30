@@ -26,6 +26,7 @@ var corsOptions = {
     origin: "http://localhost:8081"
 };
 
+
 app.use(cors(corsOptions));
 
 // parse requests of content-type
@@ -37,6 +38,10 @@ app.use(bodyParser.urlencoded({extended: true }));
 app.get("/", (req, res) => {
     res.json({message: "Welcome to Integrgal application."});
 });
+
+//routes
+require("./routes/auth.routes")(app);
+require("./routes/user.routes")(app);
 
 //set port, listens for requests to the server
 const PORT = process.env.PORT || 8080;
