@@ -9,7 +9,7 @@ const db = require("./models");
 const Role = db.role;
 
 db.mongoose
-.connect(`mongodb://${db.HOST}:${db.PORT}/${db.DB}`, {
+.connect(`mongodb+srv://Integral:oluwaseun2@@cluster1-jwt-practice.1nlz5.mongodb.net/DB?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
